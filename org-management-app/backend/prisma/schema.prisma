@@ -1,0 +1,21 @@
+model User {
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
+  password  String
+  name      String?
+  organizations Organization[]
+}
+
+model Organization {
+  id        Int      @id @default(autoincrement())
+  name      String
+  users     User[]   @relation("UserOrganizations")
+}
+
+model Session {
+  id        Int      @id @default(autoincrement())
+  userId    Int
+  user      User     @relation(fields: [userId], references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}

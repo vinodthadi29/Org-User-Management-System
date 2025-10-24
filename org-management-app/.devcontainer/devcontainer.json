@@ -1,0 +1,20 @@
+{
+  "name": "org-management-app",
+  "dockerFile": "Dockerfile",
+  "context": "..",
+  "appPort": [
+    "3000",
+    "4000"
+  ],
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+  "extensions": [
+    "ms-azuretools.vscode-docker",
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "ms-vscode.vscode-typescript-tslint-plugin"
+  ],
+  "postCreateCommand": "npm install --prefix backend && npm install --prefix frontend",
+  "remoteUser": "vscode"
+}

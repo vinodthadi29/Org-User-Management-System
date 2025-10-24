@@ -1,0 +1,36 @@
+{
+  "name": "org-management-app",
+  "version": "1.0.0",
+  "description": "A full-stack application for managing organizations and users with authentication.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node backend/src/server.js",
+    "dev": "concurrently \"npm run backend\" \"npm run frontend\"",
+    "backend": "cd backend && npm install && npm run start",
+    "frontend": "cd frontend && npm install && npm run dev",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "dependencies": {
+    "concurrently": "^6.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.0.0",
+    "ts-node": "^10.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/org-management-app.git"
+  },
+  "keywords": [
+    "organization",
+    "users",
+    "management",
+    "authentication"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yourusername/org-management-app/issues"
+  },
+  "homepage": "https://github.com/yourusername/org-management-app#readme"
+}
